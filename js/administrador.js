@@ -17,7 +17,7 @@ const imagen = document.querySelector("#imagen");
 const genero = document.querySelector("#genero");
 const pais = document.querySelector("#pais");
 const duracion = document.querySelector("#duracion");
-const pelis = []
+const pelis = [];
 
 //Funciones
 function mostrarModalPelicula() {
@@ -43,10 +43,16 @@ function creandoPelicula() {
     anio.value,
     duracion.value,
     pais.value,
-    reparto.value
+    reparto.value,
+    director.value
   );
   console.log(peliculaNueva);
-  pelis.push(peliculaNueva)
+  pelis.push(peliculaNueva);
+  guardarLocalStorage();
+}
+
+function guardarLocalStorage() {
+  localStorage.setItem("listaPeliculasKey", JSON.stringify(pelis));
 }
 
 //Logica
