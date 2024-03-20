@@ -1,95 +1,117 @@
 class Pelicula {
-    #id;
-    #titulo;
-    #descripcion;
-    #imagen;
-    #genero;
-    #anio;
-    #duracion;
-    #pais;
-    #reparto;
+  #id;
+  #titulo;
+  #descripcion;
+  #imagen;
+  #genero;
+  #anio;
+  #duracion;
+  #pais;
+  #reparto;
+  #director
 
-    constructor(titulo, descripcion, imagen, genero, anio, duracion, pais, reparto) {
-        this.#id = crypto.randomUUID();
-        this.#titulo = titulo;
-        this.#descripcion = descripcion;
-        this.#imagen = imagen;
-        this.#genero = genero;
-        this.#anio = anio;
-        this.#duracion = duracion;
-        this.#pais = pais;
-        this.#reparto = reparto;
-    }
+  constructor(
+    titulo,
+    descripcion,
+    imagen,
+    genero,
+    anio,
+    duracion,
+    pais,
+    reparto,
+    director
+  ) {
+    this.#id = crypto.randomUUID();
+    this.#titulo = titulo;
+    this.#descripcion = descripcion;
+    this.#imagen = imagen;
+    this.#genero = genero;
+    this.#anio = anio;
+    this.#duracion = duracion;
+    this.#pais = pais;
+    this.#reparto = reparto;
+    this.#director = director;
+  }
 
-    get id() {
-        return this.#id;
-    }
+  get id() {
+    return this.#id;
+  }
 
-    set id(id) {
-        this.#id = id;
-    }
+  set id(id) {
+    this.#id = id;
+  }
 
-    get titulo() {
-        return this.#titulo;
-    }
+  get titulo() {
+    return this.#titulo;
+  }
 
-    set titulo(titulo) {
-        this.#titulo = titulo;
-    }
+  set titulo(titulo) {
+    this.#titulo = titulo;
+  }
 
-    get descripcion() {
-        return this.#descripcion;
-    }
+  get descripcion() {
+    return this.#descripcion;
+  }
 
-    set descripcion(descripcion) {
-        this.#descripcion = descripcion;
-    }
+  set descripcion(descripcion) {
+    this.#descripcion = descripcion;
+  }
 
-    get imagen() {
-        return this.#imagen;
-    }
+  get imagen() {
+    return this.#imagen;
+  }
 
-    set imagen(imagen) {
-        this.#imagen = imagen;
-    }
+  set imagen(imagen) {
+    this.#imagen = imagen;
+  }
 
-    get genero() {
-        return this.#genero;
-    }
+  get genero() {
+    return this.#genero;
+  }
 
-    set genero(genero) {
-        this.#genero = genero;
-    }
+  set genero(genero) {
+    this.#genero = genero;
+  }
 
-    get anio() {
-        return this.#anio;
-    }
+  get anio() {
+    return this.#anio;
+  }
 
-    set anio(anio) {
-        this.#anio = anio;
-    }
+  set anio(anio) {
+    this.#anio = anio;
+  }
 
-    get duracion() {
-        return this.#duracion;
-    }
+  get duracion() {
+    return this.#duracion;
+  }
 
-    set duracion(duracion) {
-        this.#duracion = duracion;
-    }
+  set duracion(duracion) {
+    this.#duracion = duracion;
+  }
 
-    get pais() {
-        return this.#pais;
-    }
+  get pais() {
+    return this.#pais;
+  }
 
-    set pais(pais) {
-        this.#pais = pais;
-    }
+  set pais(pais) {
+    this.#pais = pais;
+  }
 
-    get reparto() {
-        return this.#reparto;
-    }
+  get reparto() {
+    return this.#reparto;
+  }
 
-    set reparto(reparto) {
-        this.#reparto = reparto;
-    }
+  set reparto(reparto) {
+    this.#reparto = reparto;
+  }
+
+  get director() {
+    return this.#director;
+  }
+
+  set director(director) {
+    this.#director = director;
+  }
 }
+
+export default Pelicula;
