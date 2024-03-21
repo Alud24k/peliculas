@@ -50,6 +50,14 @@ function creandoPelicula() {
   pelis.push(peliculaNueva);
   guardarLocalStorage();
   limpiarFormulario();
+  dibujarFila(peliculaNueva);
+  Swal.fire({
+    title: `Pelicula creada!`,
+
+    text: `La pelicula '${peliculaNueva.titulo}' fue creada correctamente`,
+
+    icon: "success",
+  });
 }
 
 function guardarLocalStorage() {
@@ -62,27 +70,19 @@ function limpiarFormulario() {
 
 function cargaInicial() {
   if (pelis.length > 0) {
-    pelis.map((pelicula) => dibujarFila());
+    pelis.map((peli) => dibujarFila(peli));
   }
 }
 
-function dibujarFila() {
+function dibujarFila(peli) {
   const tbody = document.querySelector("#tablaPelicula");
   tbody.innerHTML += `<tr>
-                <th scope="row">1</th>
-                <td>Kung Fu Panda 4</td>
-                <td class="col-descripcion">
-                  Po, quien se convertirá en el Maestro Espiritual del Valle de
-                  la Paz, busca a su sucesor como el nuevo Guerrero Dragón
-                  mientras lucha contra una nueva enemiga llamada "La Camaleona"
+                <th scope="row">${peli.id}</th>
+                <td>${peli.titulo}</td>
+                <td>${peli.descripcion}</td>
+                <td><img class="img-fluid rounded thumbnail img-thumbnail" src="${peli.imagen}">
                 </td>
-                <td>
-                  <img
-                    class="img-thumbnail rounded img-fluid thumbnail"
-                    src="https://pics.filmaffinity.com/kung_fu_panda_4-159494298-large.jpg"
-                  />
-                </td>
-                <td>Animación</td>
+                <td>${peli.genero}</td>
                 <td>
                   <button
                     class="btn btn-warning"
